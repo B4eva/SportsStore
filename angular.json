@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SportsStore"
+    }
+  },
+  "defaultProject": "SportsStore",
+  "cli": {
+    "analytics": false
+  }
 }
