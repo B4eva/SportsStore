@@ -14,8 +14,7 @@ export class StoreComponent {
 
     get products(): Product[] {
         let pageIndex = (this.selectedPage - 1) * this.productsPerPage
-        return this.repository.getProducts(this.selectedCategory);
-        // .slice(pageIndex, pageIndex + this.productsPerPage)
+        return this.repository.getProducts(this.selectedCategory).slice(pageIndex, pageIndex + this.productsPerPage)
 }
     get categories(): string[] {
     return this.repository.getCategories();
@@ -31,8 +30,7 @@ changePage(newPage: number) {
     this.changePage(1);
     }
     get pageNumbers(): number[] {
-    return Array(Math.ceil(this.repository
-    .getProducts(this.selectedCategory).length / this.productsPerPage))
+    return Array(Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage))
     .fill(0).map((x, i) => i + 1);
     }
 
