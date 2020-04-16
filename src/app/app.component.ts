@@ -1,10 +1,15 @@
-import { Component } from "@angular/core";
+/* import { Component } from "@angular/core";
 @Component({
 selector: "app",
 template: `<div class="bg-success p-2 text-center text-white">
-        
-      This is SportsStore Bright
+This is SportsStore Bright
+</div>`
+})
+export class AppComponent { } */
 
-  </div>`
+import { Component } from "@angular/core";
+@Component({
+selector: "app",
+template: "<store></store>"
 })
 export class AppComponent { }
