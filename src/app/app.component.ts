@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 selector: "app",
 template: `<div class="bg-success p-2 text-center text-white">
         
-      This is SportsStore
+      This is SportsStore Bright
 
   </div>`
 })
