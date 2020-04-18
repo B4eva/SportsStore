@@ -1,5 +1,6 @@
 <!-- <div class="container-fluid">
-    <div class="row"><div class="col-3 p-2">
+    <div class="row">
+        <div class="col-3 p-2">
         <button class="btn btn-block btn-outline-primary" (click)="changeCategory()">
         Home
         </button>
@@ -70,8 +71,9 @@
             <option value="8">8 per Page</option>
             </select>
             </div>
-            <div class="btn-group float-right">
-            <button *ngFor="let page of pageNumbers" (click)="changePage(page)"
+            <div class="btn-group float-right"> 
+
+          <button *counter="let page of pageCount" (click)="changePage(page)"
             class="btn btn-outline-primary"
             [class.active]="page == selectedPage">
             {{page}}

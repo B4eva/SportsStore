@@ -10,6 +10,7 @@ export class StoreComponent {
     public selectedCategory = null;
     public productsPerPage = 4;
     public selectedPage = 1;
+    
     constructor(private repository: ProductRepository) {}
 
     get products(): Product[] {
@@ -29,10 +30,16 @@ changePage(newPage: number) {
     this.productsPerPage = Number(newSize);
     this.changePage(1);
     }
-    get pageNumbers(): number[] {
+   /*  get pageNumbers(): number[] {
     return Array(Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage))
     .fill(0).map((x, i) => i + 1);
-    }
+    } */
+
+    get pageCount(): number {
+        return Math.ceil(this.repository
+        .getProducts(this.selectedCategory).length / this.productsPerPage)
+        }
+
 
 
 }
